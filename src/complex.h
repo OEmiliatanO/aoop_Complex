@@ -43,11 +43,25 @@ public:
     friend bool operator==(const Complex& x, const Complex& y);
     friend bool operator!=(const Complex& x, const Complex& y);
     friend ostream& operator<<(ostream& o, const Complex& x);
-    
+
 private:
     double re, im;
 };
 
 Complex polar(const double leng, const double arg);
+double norm(const Complex& x);
+double abs(const Complex& x);
+double arg(const Complex& x);
+Complex operator+(const Complex& x, const Complex& y);
+Complex operator-(const Complex& x, const Complex& y);
+Complex operator*(const Complex& x, const Complex& y);
+Complex operator/(const Complex& x, const Complex& y);
+Complex operator+=(Complex& x, const Complex& y);
+Complex operator-=(Complex& x, const Complex& y);
+Complex operator*=(Complex& x, const Complex& y);
+Complex operator/=(Complex& x, const Complex& y);
+bool operator==(const Complex& x, const Complex& y);
+bool operator!=(const Complex& x, const Complex& y);
+ostream& operator<<(ostream& o, const Complex& x);
 
 #endif

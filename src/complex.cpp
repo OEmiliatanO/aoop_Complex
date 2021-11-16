@@ -1,12 +1,6 @@
 #include "complex.h"
 #include <cmath>
 
-Complex polar(const double leng, const double arg)
-{
-    Complex c;
-    return c.polar(leng, arg);
-}
-
 Complex::Complex(const double re, const double im): re(re), im(im) {}
 Complex::Complex(const Complex& c): re(c.re), im(c.im) {}
 Complex& Complex::operator=(const Complex& c)
@@ -81,6 +75,11 @@ Complex Complex::operator--(int) // postfix
     return *this;
 }
 
+Complex polar(const double leng, const double arg)
+{
+    Complex c;
+    return c.polar(leng, arg);
+}
 double norm(const Complex& x)
 {
     return x.re * x.re + x.im * x.im;
